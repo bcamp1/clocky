@@ -7,7 +7,7 @@ import shlex
 
 def run_ssh_command(remote_cmd):
     """Execute a command via SSH to chum."""
-    cmd = ['ssh', 'chum', remote_cmd]
+    cmd = ['ssh', '-t', 'chum', remote_cmd]
     return subprocess.run(cmd)
 
 
