@@ -7,8 +7,8 @@ from datetime import datetime, date, timedelta
 
 
 def run_ssh_command(remote_cmd):
-    """Execute a command via SSH to chum."""
-    cmd = ['ssh', '-t', '-o', 'LogLevel=ERROR', 'chum', remote_cmd]
+    """Execute a command via SSH to chumbucket (over Tailscale)."""
+    cmd = ['ssh', '-t', '-o', 'LogLevel=ERROR', 'chumbucket', remote_cmd]
     return subprocess.run(cmd)
 
 
@@ -103,7 +103,7 @@ def main():
     Forward all arguments to the remote 'timew' command via SSH.
 
     Usage: clocky <options>
-    This executes: ssh chum 'timew <options>'
+    This executes: ssh chumbucket 'timew <options>'
 
     Special commands:
         clocky begin - Interactive prompt to start a new time entry

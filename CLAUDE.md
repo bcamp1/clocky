@@ -1,6 +1,6 @@
-Make a python executable `clocky` which calls `timew` with the correct arguments over ssh profile `chum`
+Make a python executable `clocky` which calls `timew` with the correct arguments over SSH (via Tailscale MagicDNS) to `chumbucket`
 
-`clocky <options>` -> `ssh chum 'timew <options>'`
+`clocky <options>` -> `ssh chumbucket 'timew <options>'`
 
 and it will print the output to the client.
 
